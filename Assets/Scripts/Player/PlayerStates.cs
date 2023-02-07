@@ -51,7 +51,7 @@ public class PlayerStates : MonoBehaviour
             canPlunge = true;
         else
             canPlunge = false;
-        Debug.Log(canPlunge);
+        // Debug.Log(canPlunge);
 
         if(isPlunging || isAttacking)
             canMove = false;
@@ -68,7 +68,7 @@ public class PlayerStates : MonoBehaviour
         ///things to check: move, can plunge, 
         // checks if you are within 0.05 position in the Y of the ground layer
         isGrounded = Physics2D.OverlapCircle(GroundCheck.position, 0.05f, groundLayer);
-        Debug.Log("isGrounded " + isGrounded);
+        // Debug.Log("isGrounded " + isGrounded);
 
         hit = Physics2D.Raycast(transform.position, Vector3.down, playerAttributes.GetMaxRayLength(), groundLayer.value);
         if(isGrounded)
